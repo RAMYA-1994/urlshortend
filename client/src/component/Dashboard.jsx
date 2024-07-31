@@ -7,7 +7,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('/api/urls/count');
+      const response = await axios.get('https://urlshortend-1.onrender.com/urls/count');
       setUrlCount(response.data.count);
       setUrlCountMonth(response.data.countMonth);
     };

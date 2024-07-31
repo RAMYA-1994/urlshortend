@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/auth/register', { email, firstName, lastName, password });
+      const response = await axios.post('https://urlshortend-1.onrender.com/auth/register', { email, firstName, lastName, password });
       setMessage('Registration successful! Please check your email to activate your account.');
       setError('');
     } catch (err) {
