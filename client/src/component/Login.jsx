@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://urlshortend-1.onrender.com/auth/login', { email, password });
+      const response = await axios.post('https://urlshortend-1.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       navigate('/dashboard');
     } catch (err) {

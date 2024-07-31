@@ -9,7 +9,7 @@ const CreateURL = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://urlshortend-1.onrender.com/urls', { originalUrl });
+      const response = await axios.post('https://urlshortend-1.onrender.com/api/urls', { originalUrl });
       setShortUrl(response.data.shortUrl);
       setError('');
     } catch (err) {

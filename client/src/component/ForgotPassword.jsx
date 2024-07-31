@@ -9,7 +9,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://urlshortend-1.onrender.com/auth/forgot-password', { email });
+      await axios.post('https://urlshortend-1.onrender.com/api/auth/forgot-password', { email });
       setMessage('A password reset link has been sent to your email.');
       setError('');
     } catch (err) {
